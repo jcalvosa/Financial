@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\main">
+      <UniqueIdentifier>{d10e1cea-553e-4a77-bb4a-6e463212875f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\clienteRest">
+      <UniqueIdentifier>{36f36da4-8ee9-4584-a1af-347ec888918f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\clienteRest">
+      <UniqueIdentifier>{37532432-acc5-4e74-9dd3-5e8fad97c64f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\csv">
+      <UniqueIdentifier>{9d0f58df-613b-43ef-b0f0-e061261f996f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\csv">
+      <UniqueIdentifier>{d5bc264a-b93a-490b-b935-808c91dbf27a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\peticionesRest">
+      <UniqueIdentifier>{61f83e25-9d4b-4aeb-9054-3d6881693036}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\peticionesRest">
+      <UniqueIdentifier>{16a9dda5-a592-4b72-97f9-6cfd4eeb1848}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\yahoo">
+      <UniqueIdentifier>{93eda279-a926-43b8-ae43-3ecf6b12ca6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\yahoo">
+      <UniqueIdentifier>{1a6cee4d-f95f-47a8-aedb-097e42867f67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\utils">
+      <UniqueIdentifier>{79101bf4-629a-44ab-a6c8-a28eded2f9a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\iso">
+      <UniqueIdentifier>{bcc2f415-8d71-49f8-b22c-760283e4e88d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\iso">
+      <UniqueIdentifier>{58920bbb-23ee-435a-9d98-3314599481b9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\main\main.cpp">
+      <Filter>Source Files\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\clienteRest\ClienteRest.cpp">
+      <Filter>Source Files\clienteRest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\csv\CsvReader.cpp">
+      <Filter>Source Files\csv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\csv\AttribsSet.cpp">
+      <Filter>Source Files\csv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\csv\AttribsSetVector.cpp">
+      <Filter>Source Files\csv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\peticionesRest\PeticionIndustriasPorSector.cpp">
+      <Filter>Source Files\peticionesRest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\peticionesRest\PeticionPosicionUltimoDia.cpp">
+      <Filter>Source Files\peticionesRest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\peticionesRest\PeticionTodosSectores.cpp">
+      <Filter>Source Files\peticionesRest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\peticionesRest\PeticionAtributos.cpp">
+      <Filter>Source Files\peticionesRest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\peticionesRest\PeticionCompaniasPorIndustria.cpp">
+      <Filter>Source Files\peticionesRest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\yahoo\Industries.cpp">
+      <Filter>Source Files\yahoo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\iso\Currencies.cpp">
+      <Filter>Source Files\iso</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\peticionesRest\PeticionCambioDivisa.cpp">
+      <Filter>Source Files\peticionesRest</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\clienteRest\ClienteRest.hh">
+      <Filter>Header Files\clienteRest</Filter>
+    </None>
+    <None Include="..\..\src\clienteRest\IClientePeticiones.hh">
+      <Filter>Header Files\clienteRest</Filter>
+    </None>
+    <None Include="..\..\src\csv\CsvReader.hh">
+      <Filter>Header Files\csv</Filter>
+    </None>
+    <None Include="..\..\src\csv\AttribsSet.hh">
+      <Filter>Header Files\csv</Filter>
+    </None>
+    <None Include="..\..\src\csv\AttribsSetVector.hh">
+      <Filter>Header Files\csv</Filter>
+    </None>
+    <None Include="..\..\src\peticionesRest\PeticionIndustriasPorSector.hh">
+      <Filter>Header Files\peticionesRest</Filter>
+    </None>
+    <None Include="..\..\src\peticionesRest\PeticionPosicionUltimoDia.hh">
+      <Filter>Header Files\peticionesRest</Filter>
+    </None>
+    <None Include="..\..\src\peticionesRest\PeticionTodosSectores.hh">
+      <Filter>Header Files\peticionesRest</Filter>
+    </None>
+    <None Include="..\..\src\peticionesRest\PeticionAtributos.hh">
+      <Filter>Header Files\peticionesRest</Filter>
+    </None>
+    <None Include="..\..\src\peticionesRest\PeticionCompaniasPorIndustria.hh">
+      <Filter>Header Files\peticionesRest</Filter>
+    </None>
+    <None Include="..\..\src\yahoo\Industries.hh">
+      <Filter>Header Files\yahoo</Filter>
+    </None>
+    <None Include="..\..\src\utils\Singleton.hh">
+      <Filter>Header Files\utils</Filter>
+    </None>
+    <None Include="..\..\src\iso\Currencies.hh">
+      <Filter>Header Files\iso</Filter>
+    </None>
+    <None Include="..\..\src\peticionesRest\PeticionCambioDivisa.hh">
+      <Filter>Header Files\peticionesRest</Filter>
+    </None>
+  </ItemGroup>
+</Project>
