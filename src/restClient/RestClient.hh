@@ -1,21 +1,20 @@
 
 
-#ifndef __ClienteRest_hh_
-#define __ClienteRest_hh_
+#ifndef __RestClient_hh__
+#define __RestClient_hh__
 
 #include <cpprest/http_client.h>
 #include <cpprest/uri.h>
 
-class IClientePeticiones;
+class IRestClient;
 
-class ClienteRest
+class RestClient
 {
   public:
-    static pplx::task<void> Solicita(web::http::uri & uri, 
-                                    IClientePeticiones * visitor);
+    static pplx::task<void> ask(web::http::uri & uri, IRestClient * visitor);
 
   private:
-    static std::wstringstream TraduceRespuesta(web::http::http_response & response);
+    static std::wstringstream translateAnswer(web::http::http_response & response);
 };
 
 

@@ -2,33 +2,33 @@
 
 #include <cpprest/uri.h>
 
-#include "PeticionCompaniasPorIndustria.hh"
-#include "clienteRest/ClienteRest.hh"
+#include "CompaniesPerIndustryPetition.hh"
+#include "restClient/RestClient.hh"
 #include "csv/CsvReader.hh"
 #include "yahoo/Industries.hh"
 
-PeticionCompaniasPorIndustria::PeticionCompaniasPorIndustria() :
-  PeticionAtributos()
+CompaniesPerIndustryPetition::CompaniesPerIndustryPetition() :
+  AttributesPetition()
 {
 }
 
-PeticionCompaniasPorIndustria::~PeticionCompaniasPorIndustria()
+CompaniesPerIndustryPetition::~CompaniesPerIndustryPetition()
 {
 }
 
-void PeticionCompaniasPorIndustria::Solicita(const std::wstring & industry)
+void CompaniesPerIndustryPetition::ask(const std::wstring & industry)
 {
   static const std::wstring url = L"http://biz.yahoo.com/p/csv/";
-  std::wstring peticion = url;
+  std::wstring petition = url;
 
-  peticion.append(Industries::Instance().GetIndustryId(industry));
-  peticion.append(L"conameu.csv");
+  petition.append(Industries::Instance().GetIndustryId(industry));
+  petition.append(L"conameu.csv");
 
-  web::http::uri uriPeticion(peticion);
-  ClienteRest::Solicita(uriPeticion, this).wait();
+  web::http::uri uriPetition(petition);
+  RestClient::ask(uriPetition, this).wait();
 }
 
-void PeticionCompaniasPorIndustria::Acepta(std::wstringstream & mensaje)
+void CompaniesPerIndustryPetition::accept(std::wstringstream & mensaje)
 {
   CsvReader reader(true, mensaje, 2);
 

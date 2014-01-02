@@ -1,25 +1,25 @@
 
-#ifndef __PeticionPosicionUltimoDia_h__
-#define __PeticionPosicionUltimoDia_h__
+#ifndef __LastDayPositionPetition_hh__
+#define __LastDayPositionPetition_hh__
 
 #include <string>
 
-#include "clienteRest/IClientePeticiones.hh"
-#include "PeticionAtributos.hh"
+#include "restClient/IRestClient.hh"
+#include "AttributesPetition.hh"
 
 
-class PeticionPosicionUltimoDia : public IClientePeticiones, public PeticionAtributos
+class LastDayPositionPetition : public IRestClient, public AttributesPetition
 {
   public:
-    PeticionPosicionUltimoDia();
+    LastDayPositionPetition();
 
-    virtual ~PeticionPosicionUltimoDia();
+    virtual ~LastDayPositionPetition();
 
-    void Solicita(const std::wstring & id);
+    void ask(const std::wstring & id);
 
   private:
     // ICliente interfaz
-    virtual void Acepta(std::wstringstream & mensaje);
+    virtual void accept(std::wstringstream & message);
 };
 
 #endif

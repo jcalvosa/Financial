@@ -1,16 +1,16 @@
 
 
-#ifndef __PeticionAtributos_hh__
-#define __PeticionAtributos_hh__
+#ifndef __AttributesPetition_hh__
+#define __AttributesPetition_hh__
 
 #include "csv/AttribsSetVector.hh"
 
-class PeticionAtributos
+class AttributesPetition
 {
   public:
-    PeticionAtributos();
+    AttributesPetition();
 
-    virtual ~PeticionAtributos();
+    virtual ~AttributesPetition();
 
     const AttribsSetVector & getAttribs() const   { return _attribs; }
     AttribsSetVector & getAttribs()               { return _attribs; }
@@ -19,7 +19,7 @@ class PeticionAtributos
     AttribsSetVector _attribs;
 };
 
-std::wostream & operator<<(std::wostream & os, const PeticionAtributos & p);
+std::wostream & operator<<(std::wostream & os, const AttributesPetition & p);
 
 #endif
 

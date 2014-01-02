@@ -1,23 +1,22 @@
 
 
-#ifndef __PeticionCompaniasPorIndustria_hh__
-#define __PeticionCompaniasPorIndustria_hh__
+#ifndef __CompaniesPerIndustryPetition_hh__
+#define __CompaniesPerIndustryPetition_hh__
 
-#include "clienteRest/IClientePeticiones.hh"
-#include "PeticionAtributos.hh"
+#include "restClient/IRestClient.hh"
+#include "AttributesPetition.hh"
 
-class PeticionCompaniasPorIndustria : public IClientePeticiones, public PeticionAtributos
+class CompaniesPerIndustryPetition : public IRestClient, public AttributesPetition
 {
   public:
-    PeticionCompaniasPorIndustria();
+    CompaniesPerIndustryPetition();
 
-    virtual ~PeticionCompaniasPorIndustria();
+    virtual ~CompaniesPerIndustryPetition();
 
-    void Solicita(const std::wstring & industry);
+    void ask(const std::wstring & industry);
 
   private:
-    // IClientePeticiones interfaz
-    virtual void Acepta(std::wstringstream & mensaje);
+    virtual void accept(std::wstringstream & mensaje);
 };
 
 #endif

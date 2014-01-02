@@ -4,8 +4,8 @@
 #include <iostream>
 #include <algorithm>
 
-#include "PeticionIndustriasPorSector.hh"
-#include "clienteRest/ClienteRest.hh"
+#include "IndustriesPerSectorPetition.hh"
+#include "restClient/RestClient.hh"
 #include "csv/CsvReader.hh"
 
 
@@ -44,29 +44,29 @@ std::wstring GetYahooSectorId(const std::map<Attrib, Value> & a, const std::wstr
 
 
 const std::map<Attrib, Value> 
-  PeticionIndustriasPorSector::_yahooSectorIds = FillYahooSectorsId();
+  IndustriesPerSectorPetition::_yahooSectorIds = FillYahooSectorsId();
 
-PeticionIndustriasPorSector::PeticionIndustriasPorSector()
+IndustriesPerSectorPetition::IndustriesPerSectorPetition()
 {
 }
 
-PeticionIndustriasPorSector::~PeticionIndustriasPorSector()
+IndustriesPerSectorPetition::~IndustriesPerSectorPetition()
 {
 }
 
-void PeticionIndustriasPorSector::Solicita(const std::wstring & sector)
+void IndustriesPerSectorPetition::ask(const std::wstring & sector)
 {
   static const std::wstring url = L"http://biz.yahoo.com/p/csv/";
-  std::wstring peticion = url;
+  std::wstring petition = url;
 
-  peticion.append(GetYahooSectorId(_yahooSectorIds, sector));
-  peticion.append(L"conameu.csv");
+  petition.append(GetYahooSectorId(_yahooSectorIds, sector));
+  petition.append(L"conameu.csv");
 
-  web::http::uri uriPeticion(peticion);
-  ClienteRest::Solicita(uriPeticion, this).wait();
+  web::http::uri uriPetition(petition);
+  RestClient::ask(uriPetition, this).wait();
 }
 
-void PeticionIndustriasPorSector::Acepta(std::wstringstream & mensaje)
+void IndustriesPerSectorPetition::accept(std::wstringstream & mensaje)
 {
   CsvReader reader(true, mensaje);
 

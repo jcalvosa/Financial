@@ -1,27 +1,27 @@
 
-#ifndef __PeticionIndustriasPorSector_hh__
-#define __PeticionIndustriasPorSector_hh__
+#ifndef __IndustriesPerSectorPetition_hh__
+#define __IndustriesPerSectorPetition_hh__
 
 #include <map>
 
-#include "clienteRest/IClientePeticiones.hh"
-#include "PeticionAtributos.hh"
+#include "restClient/IRestClient.hh"
+#include "AttributesPetition.hh"
 
 
-class PeticionIndustriasPorSector : public IClientePeticiones, public PeticionAtributos
+class IndustriesPerSectorPetition : public IRestClient, public AttributesPetition
 {
   public:
-    PeticionIndustriasPorSector();
+    IndustriesPerSectorPetition();
 
-    virtual ~PeticionIndustriasPorSector();
+    virtual ~IndustriesPerSectorPetition();
 
-    void Solicita(const std::wstring & sector);
+    void ask(const std::wstring & sector);
 
   private:
     static const std::map<Attrib, Value> _yahooSectorIds; 
 
     // IClientePeticiones interfaz
-    virtual void Acepta(std::wstringstream & mensaje);
+    virtual void accept(std::wstringstream & mensaje);
 };
 
 #endif

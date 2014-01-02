@@ -1,17 +1,17 @@
 
 
-#include "PeticionAtributos.hh"
+#include "AttributesPetition.hh"
 
 
-PeticionAtributos::PeticionAtributos()
+AttributesPetition::AttributesPetition()
 {
 }
 
-PeticionAtributos::~PeticionAtributos()
+AttributesPetition::~AttributesPetition()
 {
 }
 
-std::wostream & operator<<(std::wostream & os, const PeticionAtributos & p)
+std::wostream & operator<<(std::wostream & os, const AttributesPetition & p)
 {
   for (auto sectInfoIter = p.getAttribs().cbegin();
         sectInfoIter != p.getAttribs().cend();

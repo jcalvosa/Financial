@@ -1,23 +1,23 @@
 
-#ifndef __PeticionTodosSectores_h__
-#define __PeticionTodosSectores_h__
+#ifndef __AllSectorsPetition_hh__
+#define __AllSectorsPetition_hh__
 
-#include "clienteRest/IClientePeticiones.hh"
-#include "PeticionAtributos.hh"
+#include "restClient/IRestClient.hh"
+#include "AttributesPetition.hh"
 
 
-class PeticionTodosSectores : public IClientePeticiones, public PeticionAtributos
+class AllSectorsPetition : public IRestClient, public AttributesPetition
 {
   public:
-    PeticionTodosSectores();
+    AllSectorsPetition();
 
-    virtual ~PeticionTodosSectores();
+    virtual ~AllSectorsPetition();
 
-    void Solicita();
+    void ask();
 
   private:
     // IClientePeticiones interfaz
-    virtual void Acepta(std::wstringstream & mensaje);
+    virtual void accept(std::wstringstream & mensaje);
 };
 
 

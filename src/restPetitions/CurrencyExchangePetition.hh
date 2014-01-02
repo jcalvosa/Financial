@@ -1,23 +1,23 @@
 
-#ifndef __PeticionCambioDivisa_hh__
-#define __PeticionCambioDivisa_hh__
+#ifndef __CurrencyExchangePetition_hh__
+#define __CurrencyExchangePetition_hh__
 
 
-#include "clienteRest/IClientePeticiones.hh"
-#include "PeticionAtributos.hh"
+#include "restClient/IRestClient.hh"
+#include "AttributesPetition.hh"
 
-class PeticionCambioDivisa : public IClientePeticiones, public PeticionAtributos
+class CurrencyExchangePetition : public IRestClient, public AttributesPetition
 {
   public:
-    PeticionCambioDivisa();
+    CurrencyExchangePetition();
 
-    virtual ~PeticionCambioDivisa();
+    virtual ~CurrencyExchangePetition();
 
-    void Solicita(const std::wstring & idDivisa1, const std::wstring & idDivisa2);
+    void ask(const std::wstring & idCurrency1, const std::wstring & idCurrency2);
 
   private:
     // IClientePeticiones interfaz
-    virtual void Acepta(std::wstringstream & mensaje);
+    virtual void accept(std::wstringstream & mensaje);
 };
 
 #endif

@@ -2,26 +2,15 @@
 
 #include <cstdlib>
 
-#include "ClienteRest.hh"
-#include "IClientePeticiones.hh"
-
+#include "RestClient.hh"
+#include "IRestClient.hh"
 
 //
-// la lista de propiedades de la peticion se encuentra en 
+// complete properties list is in:
 // https://code.google.com/p/yahoo-finance-managed/wiki/enumQuoteProperty
 //
 
-// peticion de situacion de Google
-// n: nombre
-// s: simbolo
-// l1: ultimo precio de negociacion
-// o: precio de apertura
-// p: precio de cierre anterior
-const std::wstring url = 
-  L"http://download.finance.yahoo.com/d/quotes.csv?s=GOOG&f=nsl1op&e=.csv";
-
-pplx::task<void> ClienteRest::Solicita(web::http::uri & uri, 
-                                       IClientePeticiones * visitor)
+pplx::task<void> RestClient::ask(web::http::uri & uri, IRestClient * visitor)
 {
   web::http::client::http_client client(uri);
 
@@ -38,30 +27,29 @@ pplx::task<void> ClienteRest::Solicita(web::http::uri & uri,
       // In this example, we print the length of the response to the console.
       std::cout << "Content length is " << response.headers().content_length() << " bytes." << std::endl;
 
-      std::wstringstream respuesta = TraduceRespuesta(response);
+      std::wstringstream answer = translateAnswer(response);
 
-      visitor->Acepta(respuesta);
+      visitor->accept(answer);
     }
   });
 }
 
-std::wstringstream ClienteRest::TraduceRespuesta(web::http::http_response & response)
+std::wstringstream RestClient::translateAnswer(web::http::http_response & response)
 {
   using namespace concurrency::streams;
 
-  std::wstringstream respuesta;
+  std::wstringstream answer;
 
   while (!response.body().is_eof())
   {
     auto task = response.body().read().then([&](istream::int_type val)
     {
-      //std::stringstream respuesta;
-      respuesta << (char)val;
+      answer << (char)val;
     });
 
     task.wait();
   }
 
-  return respuesta;
+  return answer;
 }
 

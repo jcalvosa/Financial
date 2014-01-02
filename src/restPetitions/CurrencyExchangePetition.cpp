@@ -1,35 +1,35 @@
 
 #include <cpprest/uri.h>
 
-#include "PeticionCambioDivisa.hh"
+#include "CurrencyExchangePetition.hh"
 
-#include "clienteRest/ClienteRest.hh"
+#include "restClient/RestClient.hh"
 #include "csv/CsvReader.hh"
 
-PeticionCambioDivisa::PeticionCambioDivisa() :
-  PeticionAtributos()
+CurrencyExchangePetition::CurrencyExchangePetition() :
+  AttributesPetition()
 {
 }
 
-PeticionCambioDivisa::~PeticionCambioDivisa()
+CurrencyExchangePetition::~CurrencyExchangePetition()
 {
 }
 
-void PeticionCambioDivisa::Solicita(const std::wstring & idDivisa1, 
-                                    const std::wstring & idDivisa2)
+void CurrencyExchangePetition::ask(const std::wstring & idCurrency1, 
+                                   const std::wstring & idCurrency2)
 {
   static const std::wstring url = L"http://finance.yahoo.com/d/quotes.csv?e=.csv&f=sl1d1t1&s=";
-  std::wstring peticion = url;
+  std::wstring petition = url;
 
-  peticion.append(idDivisa1);
-  peticion.append(idDivisa2);
-  peticion.append(L"=X");
+  petition.append(idCurrency1);
+  petition.append(idCurrency2);
+  petition.append(L"=X");
 
-  web::http::uri uriPeticion(peticion);
-  ClienteRest::Solicita(uriPeticion, this).wait();
+  web::http::uri uriPetition(petition);
+  RestClient::ask(uriPetition, this).wait();
 }
 
-void PeticionCambioDivisa::Acepta(std::wstringstream & mensaje)
+void CurrencyExchangePetition::accept(std::wstringstream & mensaje)
 {
   CsvReader reader(false, mensaje);
 

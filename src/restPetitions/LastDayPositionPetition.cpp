@@ -3,33 +3,33 @@
 #include <cpprest/uri.h>
 #include <iostream>
 
-#include "PeticionPosicionUltimoDia.hh"
-#include "clienteRest/ClienteRest.hh"
+#include "LastDayPositionPetition.hh"
+#include "restClient/RestClient.hh"
 #include "csv/CsvReader.hh"
 
 
-PeticionPosicionUltimoDia::PeticionPosicionUltimoDia()
+LastDayPositionPetition::LastDayPositionPetition()
 {
 }
 
-PeticionPosicionUltimoDia::~PeticionPosicionUltimoDia()
+LastDayPositionPetition::~LastDayPositionPetition()
 {
 }
 
-void PeticionPosicionUltimoDia::Solicita(const std::wstring & id)
+void LastDayPositionPetition::ask(const std::wstring & id)
 {
   static const std::wstring url_anterior = L"http://download.finance.yahoo.com/d/quotes.csv?s=";
   static const std::wstring flags = L"&f=d1opv&e=.csv";
 
-  std::wstring peticion = url_anterior + id + flags;
+  std::wstring petition = url_anterior + id + flags;
 
-  web::http::uri uriPeticion(peticion);
-  ClienteRest::Solicita(uriPeticion, this).wait();
+  web::http::uri uriPetition(petition);
+  RestClient::ask(uriPetition, this).wait();
 }
 
-void PeticionPosicionUltimoDia::Acepta(std::wstringstream & mensaje)
+void LastDayPositionPetition::accept(std::wstringstream & message)
 {
-  CsvReader reader(false, mensaje);
+  CsvReader reader(false, message);
 
   reader.AddHeaderField(L"Last trade date");
   reader.AddHeaderField(L"Open value");

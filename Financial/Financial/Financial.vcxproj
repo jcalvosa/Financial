@@ -87,33 +87,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\clienteRest\ClienteRest.cpp" />
     <ClCompile Include="..\..\src\csv\AttribsSet.cpp" />
     <ClCompile Include="..\..\src\csv\AttribsSetVector.cpp" />
     <ClCompile Include="..\..\src\csv\CsvReader.cpp" />
     <ClCompile Include="..\..\src\iso\Currencies.cpp" />
     <ClCompile Include="..\..\src\main\main.cpp" />
-    <ClCompile Include="..\..\src\peticionesRest\PeticionAtributos.cpp" />
-    <ClCompile Include="..\..\src\peticionesRest\PeticionCambioDivisa.cpp" />
-    <ClCompile Include="..\..\src\peticionesRest\PeticionCompaniasPorIndustria.cpp" />
-    <ClCompile Include="..\..\src\peticionesRest\PeticionIndustriasPorSector.cpp" />
-    <ClCompile Include="..\..\src\peticionesRest\PeticionPosicionUltimoDia.cpp" />
-    <ClCompile Include="..\..\src\peticionesRest\PeticionTodosSectores.cpp" />
+    <ClCompile Include="..\..\src\restClient\RestClient.cpp" />
+    <ClCompile Include="..\..\src\restPetitions\AllSectorsPetition.cpp" />
+    <ClCompile Include="..\..\src\restPetitions\AttributesPetition.cpp" />
+    <ClCompile Include="..\..\src\restPetitions\CompaniesPerIndustryPetition.cpp" />
+    <ClCompile Include="..\..\src\restPetitions\CurrencyExchangePetition.cpp" />
+    <ClCompile Include="..\..\src\restPetitions\IndustriesPerSectorPetition.cpp" />
+    <ClCompile Include="..\..\src\restPetitions\LastDayPositionPetition.cpp" />
     <ClCompile Include="..\..\src\yahoo\Industries.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\src\clienteRest\ClienteRest.hh" />
-    <None Include="..\..\src\clienteRest\IClientePeticiones.hh" />
     <None Include="..\..\src\csv\AttribsSet.hh" />
     <None Include="..\..\src\csv\AttribsSetVector.hh" />
     <None Include="..\..\src\csv\CsvReader.hh" />
     <None Include="..\..\src\iso\Currencies.hh" />
-    <None Include="..\..\src\peticionesRest\PeticionAtributos.hh" />
-    <None Include="..\..\src\peticionesRest\PeticionCambioDivisa.hh" />
-    <None Include="..\..\src\peticionesRest\PeticionCompaniasPorIndustria.hh" />
-    <None Include="..\..\src\peticionesRest\PeticionIndustriasPorSector.hh" />
-    <None Include="..\..\src\peticionesRest\PeticionPosicionUltimoDia.hh" />
-    <None Include="..\..\src\peticionesRest\PeticionTodosSectores.hh" />
+    <None Include="..\..\src\restClient\IRestClient.hh" />
+    <None Include="..\..\src\restClient\RestClient.hh" />
+    <None Include="..\..\src\restPetitions\AllSectorsPetition.hh" />
+    <None Include="..\..\src\restPetitions\AttributesPetition.hh" />
+    <None Include="..\..\src\restPetitions\CompaniesPerIndustryPetition.hh" />
+    <None Include="..\..\src\restPetitions\CurrencyExchangePetition.hh" />
+    <None Include="..\..\src\restPetitions\IndustriesPerSectorPetition.hh" />
+    <None Include="..\..\src\restPetitions\LastDayPositionPetition.hh" />
     <None Include="..\..\src\utils\Singleton.hh" />
     <None Include="..\..\src\yahoo\Industries.hh" />
   </ItemGroup>
