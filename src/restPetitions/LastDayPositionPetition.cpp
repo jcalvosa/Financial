@@ -8,7 +8,8 @@
 #include "csv/CsvReader.hh"
 
 
-LastDayPositionPetition::LastDayPositionPetition()
+LastDayPositionPetition::LastDayPositionPetition() : 
+  AttributesPetition()
 {
 }
 

@@ -46,7 +46,8 @@ std::wstring GetYahooSectorId(const std::map<Attrib, Value> & a, const std::wstr
 const std::map<Attrib, Value> 
   IndustriesPerSectorPetition::_yahooSectorIds = FillYahooSectorsId();
 
-IndustriesPerSectorPetition::IndustriesPerSectorPetition()
+IndustriesPerSectorPetition::IndustriesPerSectorPetition() : 
+  AttributesPetition()
 {
 }
 
