@@ -1,2 +1,6 @@
--- peticion de todos los valores que conforman un mercado (%5EDJI - Down Jones)
+-- peticion de todos los valores que conforman un mercado (EDJI - Down Jones)
 http://download.finance.yahoo.com/d/quotes.csv?s=%40%5EDJI&f=nsl1op&e=.csv
+-- cotizacion global del mercado (ENZ50 - New Zeeland)
+http://download.finance.yahoo.com/d/quotes.csv?s=%5ENZ50&f=nsl1op&e=.csv
+
+-- localizar mercados en pagina http://nz.finance.yahoo.com/indices?e=nzx
