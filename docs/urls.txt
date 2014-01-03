@@ -1,0 +1,2 @@
+-- peticion de todos los valores que conforman un mercado (%5EDJI - Down Jones)
+http://download.finance.yahoo.com/d/quotes.csv?s=%40%5EDJI&f=nsl1op&e=.csv

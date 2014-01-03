@@ -1,0 +1,12 @@
+Symbol,Name,Components
+%5EXAX,AMEX Composite,no
+%5EIIX,AMEX Internet,yes
+%5ENWX,AMEX Networking,no
+%5EXMI,Major Market,yes
+%5EPSE,Pacific Exchange Technology,no
+%5ESOXX,Philadelphia Semiconductor,no
+%5ERUT,Russell 2000,no
+%5ERUA,Russell 3000,no
+%5EDOT,TSC Internet,no
+%5EDWC,Wilshire,no
+%5EBATSK,BATS 1000 Index,no

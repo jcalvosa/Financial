@@ -1,0 +1,13 @@
+Symbol,Name,Components
+%5EATX,ATX,yes
+%5EBFX,BEL-20,yes
+%5EFCHI,CAC 40,yes
+%5EGDAXI,DAX,yes
+AEX.AS,AEX General,yes
+%5EOSEAX,OSE All Share,yes
+%5EMIBTEL,MIBTel,yes
+%5ESSMI,Swiss Market,yes
+%5EFTSE,FTSE 100,yes
+FPXAA.PR,PX Index,no
+MICEXINDEXCF.ME,MICEX,no
+GD.AT,Athex Composite Share Price Index,no

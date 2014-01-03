@@ -1,0 +1,12 @@
+Symbol,Name,Components
+%5EAORD,All Ordinaries,no
+%5ESSEC,Shanghai Composite,no
+%5EHSI,Hang Seng,yes
+%5EBSESN,BSE 30,no
+%5EJKSE,Jakarta Composite,yes
+%5EKLSE,KLSE Composite,yes
+%5EN225,Nikkei 225,no
+%5ENZ50,NZSE 50,yes
+%5ESTI,Straits Times,yes
+%5EKS11,Seoul Composite,no
+%5ETWII,Taiwan Weighted,no

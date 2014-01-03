@@ -1,0 +1,13 @@
+Symbol,Name,Components
+%5EIXIC,Composite,yes
+%5ETV.O,Volume in 000's,no
+%5ENDX,Nasdaq 100,yes
+%5EIXBK,Banks,no
+%5EIXFN,Financials,no
+%5EIXF,Financials 100,yes
+%5EIXID,Industrials,no
+%5EIXIS,Insurance,no
+%5EIXK,Computers,no
+%5EIXTR,Transportation,no
+%5EIXUT,Telecommunications,no
+%5ENBI,Biotech,yes

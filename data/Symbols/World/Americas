@@ -1,0 +1,6 @@
+Symbol,Name,Components
+%5EMERV,MerVal,yes
+%5EBVSP,Bovespa,yes
+%5EGSPTSE,S&P TSX Composite,no
+%5EMXX,IPC,yes
+%5EGSPC,500 Index,no
